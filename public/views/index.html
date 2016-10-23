@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='giphyApp'>
+  <head>
+    <meta charset='utf-8'>
+    <title>It's Giphy!</title>
+
+    <script src='assets/vendors/angular.min.js'></script>
+    <script src='assets/vendors/angular-route.min.js'></script>
+
+    <script src='scripts/app.module.js'></script>
+    <script src='scripts/app.config.js'></script>
+    <script src='scripts/giphy.service.js'></script>
+    <script src='scripts/main.controller.js'></script>
+
+    <link rel='stylesheet' href='styles/main.css' />
+
+    <base href='/' />
+  </head>
+  <body>
+    <header>
+      <h1>A.D.D. GIPHY!</h1>
+    </header>
+    <nav>
+      <a class='home' href='/home'>Home</a>
+      <a class='favorites' href='/favorites'>Favorites</a>
+    </nav>
+    <main>
+      <ng-view>
+
+      </ng-view>
+    </main>
+    <footer>
+      <p>Create by &copy; Jeffrey Miller - 2016</p>
+    </footer>
+  </body>
+</html>
