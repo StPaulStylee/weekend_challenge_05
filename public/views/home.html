@@ -1,1 +1,14 @@
-<h1>I'm Here!</h1>
+<section class='gif'>
+  <input ng-model='main.search' />
+  <button type='submit' ng-click='main.getGif()'>Search</button>
+  <button ng-click='main.getRandom()'>Random GIPHY!</button>
+  <div class='gif-display'>
+    <div class='image'>
+      <img ng-src='{{ main.gif.toString() }}'  />
+    </div>
+  </div>
+  <form>
+    <input type='text' id='submit-favorite' ng-model='main.favorite.url'  />
+    <button type='submit' ng-click='main.submitFavorite()'>Add Favorite</button>
+  </form>
+</section>
