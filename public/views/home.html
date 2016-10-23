@@ -1,14 +1,14 @@
 <section class='gif'>
-  <input ng-model='main.search' />
-  <button type='submit' ng-click='main.getGif()'>Search</button>
-  <button ng-click='main.getRandom()'>Random GIPHY!</button>
+  <input ng-model='api.search' />
+  <button type='submit' ng-click='api.getGif()'>Search</button>
+  <button ng-click='api.getRandom()'>Random GIPHY!</button>
   <div class='gif-display'>
     <div class='image'>
-      <img ng-src='{{ main.gif.toString() }}'  />
+      <img ng-src='{{ api.gif.toString() }}'  />
     </div>
   </div>
   <form>
-    <input type='text' id='submit-favorite' ng-model='main.favorite.url'  />
-    <button type='submit' ng-click='main.submitFavorite()'>Add Favorite</button>
+    <input type='text' id='submit-favorite' ng-model='api.comment'  />
+    <button type='submit' ng-click='api.submitFavorite(api.comment, api.gif)'>Add Favorite</button>
   </form>
 </section>
