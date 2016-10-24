@@ -29,8 +29,8 @@ router.post('/', function(req, res){
     finally {
       done();
     }
-  });//End of pool.connect
-})//End of post request
+  });
+})
 
 router.get('/', function(req, res){
   pool.connect(function(err, client, done){
@@ -54,7 +54,7 @@ router.get('/', function(req, res){
     finally {
       done();
     }
-  });//End of pool.connect
-})//End of GET request
+  });
+})
 
 module.exports = router;

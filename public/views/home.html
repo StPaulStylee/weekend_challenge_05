@@ -1,6 +1,8 @@
 <section class='gif'>
   <p>Favorites Count: {{ api.favoritesCount }}</p>
-  <input ng-model='api.search' />
+  <p>Use the search box below to draw your attention away from more important things!</p>
+  <p>Or... let us find a random distraction for you!</p>
+  <input ng-model='api.search' placeholder='Find a GIF!'/>
   <button type='submit' ng-click='api.getGif()'>Search</button>
   <button ng-click='api.getRandom()'>Random GIPHY!</button>
   <div class='gif-display'>
