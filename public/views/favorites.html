@@ -5,7 +5,6 @@
     <div class='favorite-gifs' ng-repeat='favorite in fav.favoritesArr'>
       <img ng-src='{{ favorite.url }}'  />
       <p> {{ favorite.comments }} </p>
-      <button type='button' ng-click='{{ fav.deleteFavorite($index) }}'
     </div>
   </div>
 </section>
