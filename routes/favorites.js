@@ -8,7 +8,6 @@ var config = {
 var pool = new pg.Pool(config);
 
 router.post('/', function(req, res){
-  console.log('Post from home: ', req.body.url, req.body.comments);
   pool.connect(function(err, client, done){
     try {
       if(err){
