@@ -6,6 +6,7 @@ function APIController(giphy) {
   console.log('APIController loaded');
   api.gif = [];
   api.favorite = {};
+  api.favoriteList = [];
 
 
 api.getRandom = function() {
@@ -31,10 +32,11 @@ api.getGif = function() {
 }
 
 api.submitFavorite = function(comment, gif) {
-  api.favorite = {url: gif[0], comments: comment};
+  api.favorite = {"url": gif[0], "comments": comment};
+  api.favoriteList.push(api.favorite);
   console.log(api.favorite);
   giphy.submitFavorite(api.favorite).then(function(response){
     console.log('Response from Service: ', response);
   });
 };
-}
+}// End of APIController

@@ -16,7 +16,7 @@ router.post('/', function(req, res){
         res.sendStatus(500);
         return;
       }
-      client.query('INSERT INTO favorites (url, comments) VALUES ($1, $2) returning *', [req.body.url, req.body.comment],
+      client.query('INSERT INTO favorites (url, comments) VALUES ($1, $2) returning *', [req.body.url, req.body.comments],
         function(err, result){
           if(err){
             console.log('Error querying the DB', err);
@@ -24,7 +24,7 @@ router.post('/', function(req, res){
             return;
           }
           console.log('Success querying the DB!', result.rows);
-          res.send(result.rows);
+          res.send(result.rows)
         });
     }
     finally {
