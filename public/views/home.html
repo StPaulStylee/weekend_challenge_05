@@ -1,4 +1,5 @@
 <section class='gif'>
+  <p>Favorites Count: {{ api.favoritesCount }}</p>
   <input ng-model='api.search' />
   <button type='submit' ng-click='api.getGif()'>Search</button>
   <button ng-click='api.getRandom()'>Random GIPHY!</button>
@@ -8,7 +9,7 @@
     </div>
   </div>
   <form>
-    <input type='text' id='submit-favorite' ng-model='api.comment'  />
+    <textarea id='submit-favorite' ng-model='api.comment'></textarea>
     <button type='submit' ng-click='api.submitFavorite(api.comment, api.gif)'>Add Favorite</button>
   </form>
 </section>

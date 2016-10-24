@@ -6,7 +6,7 @@ angular.module('giphyApp')
            controller: 'APIController as api'
          }).when('/favorites', {
            templateUrl: 'views/favorites.html',
-           controller: 'APIController as api'
+           controller: 'FavoriteController as fav'
          }).otherwise({
            redirectTo: '/home'
          });

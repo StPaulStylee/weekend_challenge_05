@@ -36,4 +36,11 @@ function GiphyAPIService($http) {
       });
   };
 
+  this.getFavorites = function() {
+    return $http.get('/favorites')
+      .then(function(response){
+        return response;
+      });
+  }
+
 }
