@@ -32,6 +32,7 @@ api.getGif = function() {
     api.gif.push(api.result);
     }
   });
+  api.search = '';
 }
 
 // Submit data from view into an object so it can be entered into a
@@ -41,6 +42,7 @@ api.submitFavorite = function(comment, gif) {
   giphy.submitFavorite(api.favorite).then(function(response){
     api.getFavorites();
   });
+  api.comment = '';
 };
 
 // Tell giphy.service to run a function that will run a GET request to the DB
