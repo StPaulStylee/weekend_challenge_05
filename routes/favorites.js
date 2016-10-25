@@ -30,7 +30,7 @@ router.post('/', function(req, res){
       done();
     }
   });
-})
+});
 
 router.get('/', function(req, res){
   pool.connect(function(err, client, done){
@@ -55,6 +55,29 @@ router.get('/', function(req, res){
       done();
     }
   });
-})
+});
+
+// router.delete('/:id', function(req, res) {
+//     var id = req.params.id;
+//     pool.connect(function(err, client, done) {
+//         try {
+//             if (err) {
+//                 console.log('Error connecting to DB', err);
+//                 res.sendStatus(500);
+//                 return;
+//             }
+//             client.query('DELETE FROM favorites WHERE id=$1', [id], function(err) {
+//                 if (err) {
+//                     console.log('Error querying the DB', err);
+//                     res.sendStatus(500);
+//                     return;
+//                 }
+//                 res.sendStatus(204);
+//             });
+//         } finally {
+//             done();
+//         }
+//     });
+// });
 
 module.exports = router;

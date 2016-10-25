@@ -6,6 +6,7 @@ angular.module('giphyApp')
 
 function APIController(giphy) {
   var api = this;
+
   api.gif = [];
   api.favorite = {};
   api.favoritesArr = [];
@@ -15,7 +16,7 @@ function APIController(giphy) {
 api.getRandom = function() {
   giphy.getRandom().then(function(rando){
     api.random = rando.image_url;
-    api.gif.pop();
+    api.gif = [];
     api.gif.push(api.random);
     });
   };
@@ -28,7 +29,7 @@ api.getGif = function() {
       alert('Sorry, no results found. Refactor your search and try again!');
     } else {
     api.result = results[0].images.downsized_large.url;
-    api.gif.pop();
+    api.gif = [];
     api.gif.push(api.result);
     }
   });
@@ -60,6 +61,8 @@ api.getFavorites();
 
 }
 
+//-------------------- New Conroller -----------------------------------//
+
 function FavoriteController(giphy) {
   var fav = this;
 
@@ -73,6 +76,10 @@ fav.getFavorites = function() {
     fav.favoritesArr = response.data;
     fav.favoritesCount = response.data.length;
   });
+}
+
+fav.deleteFavorites = function() {
+  giphy.deleteFavorites().then(fav.getFavorites());
 }
 
 // Functions called so random GIF and favorites are available on load

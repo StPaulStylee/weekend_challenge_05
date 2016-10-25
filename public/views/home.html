@@ -7,7 +7,7 @@
   <button ng-click='api.getRandom()'>Random GIPHY!</button>
   <div class='gif-display'>
     <div class='image'>
-      <img ng-src='{{ api.gif.toString() }}'  />
+      <img ng-src='{{ api.gif.toString() }}' alt='A gif from GIPHY' />
     </div>
   </div>
   <form>
@@ -15,3 +15,5 @@
     <button type='submit' ng-click='api.submitFavorite(api.comment, api.gif)'>Add Favorite</button>
   </form>
 </section>
+
+<!-- an <hr /> creates a line that spreads across the entire page. --> 
