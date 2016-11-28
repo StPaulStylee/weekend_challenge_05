@@ -42,7 +42,7 @@ function GiphyAPIService($http) {
       });
   };
 
-// Sends a GET request to the router and turns the data to the controller
+// Sends a GET request to the router and returns the data to the controller
   this.getFavorites = function() {
     return $http.get('/favorites')
       .then(function(response){
