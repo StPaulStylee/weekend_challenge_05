@@ -12,18 +12,19 @@
     <script src='scripts/giphy.service.js'></script>
     <script src='scripts/api.controller.js'></script>
 
+    <link href='https://fonts.googleapis.com/css?family=Faster+One' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='styles/main.css' />
 
     <base href='/' />
   </head>
   <body>
     <header>
-      <h1>A.D.D. GIPHY!</h1>
-      <h3>Reinforcing your attention deficit since 2016!</h3>
+      <h1 id='title'>A.D.D. GIPHY!</h1>
+      <h3 id='banner'>Reinforcing your attention deficit since 2016!</h3>
     </header>
     <nav>
-      <a class='home' href='/home'>Home</a>
-      <a class='favorites' href='/favorites'>Favorites</a>
+      <a id='home' href='/home'>Home</a>
+      <a id='favorites' href='/favorites'>Favorites</a>
     </nav>
     <main>
       <ng-view>
@@ -31,7 +32,7 @@
       </ng-view>
     </main>
     <footer>
-      <p>Created by &copy; Jeffrey Miller - 2016</p>
+      <p id='footer'>Created by &copy; Jeffrey Miller - 2016</p>
     </footer>
   </body>
 </html>
